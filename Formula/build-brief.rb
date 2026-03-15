@@ -1,31 +1,31 @@
 class BuildBrief < Formula
   desc "Reduce noisy Gradle output into concise build summaries"
-  homepage "https://github.com/static-var/build-brief"
-  version "0.0.1"
+  homepage "https://bb.staticvar.dev"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/static-var/build-brief/releases/download/v#{version}/build-brief_#{version}_darwin_arm64.tar.gz"
-      sha256 "d977f68814c525b2f389cbb8f44d14c1734458f559f6cd894a918dde4afdd29a"
+      url "https://github.com/static-var/build-brief/releases/download/v0.0.2/build-brief_0.0.2_darwin_arm64.tar.gz"
+      sha256 "1b7d6973da2517a419f24a8e0c2460e2b6841d9de5f96f823cfe67153e253c1f"
     elsif Hardware::CPU.intel?
-      url "https://github.com/static-var/build-brief/releases/download/v#{version}/build-brief_#{version}_darwin_amd64.tar.gz"
-      sha256 "e9ce150dcf42a8d6900a3a44d86c7b97012bc00ee1fccc7311ff28e3e7fa81df"
+      url "https://github.com/static-var/build-brief/releases/download/v0.0.2/build-brief_0.0.2_darwin_amd64.tar.gz"
+      sha256 "30255b648c861b2c8e89f6cc001196755090a403723290b31a0095e294e35112"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/static-var/build-brief/releases/download/v#{version}/build-brief_#{version}_linux_arm64.tar.gz"
-      sha256 "23c87add4d5b137313fd56bcfbfd9056f677dfcd72d14082149c7e807086a873"
+      url "https://github.com/static-var/build-brief/releases/download/v0.0.2/build-brief_0.0.2_linux_arm64.tar.gz"
+      sha256 "ef8e755d8bf0ba6004f49f3b8c458a90e7322b6f098b8163ecd3cbae1fd82ca3"
     elsif Hardware::CPU.intel?
-      url "https://github.com/static-var/build-brief/releases/download/v#{version}/build-brief_#{version}_linux_amd64.tar.gz"
-      sha256 "557946f9b697018d99562cba7a161080f6f666060f84d397f1c0621a184bccd1"
+      url "https://github.com/static-var/build-brief/releases/download/v0.0.2/build-brief_0.0.2_linux_amd64.tar.gz"
+      sha256 "3254d3285b90193c49e2287318824c05282d6682681af62c5817717731081447"
     end
   end
 
   def install
-    binary = Dir["**/build-brief"].find { |path| File.file?(path) }
+    binary = Dir["build-brief_*/build-brief"].find { |path| File.file?(path) }
     raise "build-brief binary not found in archive" unless binary
 
     bin.install binary => "build-brief"

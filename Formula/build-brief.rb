@@ -1,26 +1,26 @@
 class BuildBrief < Formula
   desc "Reduce noisy Gradle output into concise build summaries"
   homepage "https://bb.staticvar.dev"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/static-var/build-brief/releases/download/v0.1.0/build-brief_0.1.0_darwin_arm64.tar.gz"
-      sha256 "93df69ad954c13645df3f2b43d798b6bb76120e139c8e1cc3e95030f0d275d1d"
+      url "https://github.com/static-var/build-brief/releases/download/v0.2.0/build-brief_0.2.0_darwin_arm64.tar.gz"
+      sha256 "d5c888a13664d444a74fc890cc44864af423da8d64f0025f4f88781b15625ac5"
     elsif Hardware::CPU.intel?
-      url "https://github.com/static-var/build-brief/releases/download/v0.1.0/build-brief_0.1.0_darwin_amd64.tar.gz"
-      sha256 "af0f72f4879f547e6b8a18a2f4c04b57da611f4e2fe6da80df83b765f4e009a7"
+      url "https://github.com/static-var/build-brief/releases/download/v0.2.0/build-brief_0.2.0_darwin_amd64.tar.gz"
+      sha256 "62e868a6b4e3b002d79d4b7cfb0a273145d97d6d6ccb6537ca8179c6ab3aede6"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/static-var/build-brief/releases/download/v0.1.0/build-brief_0.1.0_linux_arm64.tar.gz"
-      sha256 "b3041225317c448eb877f1756268a43b5b98fa848b49d2a13aafeeea5ba9a330"
+      url "https://github.com/static-var/build-brief/releases/download/v0.2.0/build-brief_0.2.0_linux_arm64.tar.gz"
+      sha256 "0edf34ad7462a2dd08ebba47788c18911871d6a544d112be5bb83870503e6a4d"
     elsif Hardware::CPU.intel?
-      url "https://github.com/static-var/build-brief/releases/download/v0.1.0/build-brief_0.1.0_linux_amd64.tar.gz"
-      sha256 "d238348765fc33eac094949c3f4672345da36309e167c55ef24bd33c26a2b383"
+      url "https://github.com/static-var/build-brief/releases/download/v0.2.0/build-brief_0.2.0_linux_amd64.tar.gz"
+      sha256 "1f6c8756b1d172ae23296915956319ade7cb55a554170ec6ea389217ffd09815"
     end
   end
 
